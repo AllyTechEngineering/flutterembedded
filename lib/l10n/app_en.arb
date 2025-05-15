@@ -1,0 +1,11 @@
+{
+    "@@locale": "en",
+    "appTitle": "Flutter Embedded UI",
+    "@appTitle": {},
+    "crewMode": "Crew Mode",
+    "@crewMode": {},
+    "managerMode": "Manager Mode",
+    "@managerMode": {},
+    "selectProduct": "Select Product",
+    "@selectProduct": {}
+}

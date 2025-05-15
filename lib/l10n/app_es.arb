@@ -1,0 +1,11 @@
+{
+    "@@locale": "es",
+    "appTitle": "Interfaz Embebida Flutter",
+    "@appTitle": {},
+    "crewMode": "Modo de Personal",
+    "@crewMode": {},
+    "managerMode": "Modo de Gerente",
+    "@managerMode": {},
+    "selectProduct": "Seleccionar Producto",
+    "@selectProduct": {}
+}
