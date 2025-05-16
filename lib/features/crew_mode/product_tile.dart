@@ -40,7 +40,7 @@ class ProductTile extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(Icons.chevron_right, color: Colors.white),
+              const Icon(Icons.chevron_right, color: Colors.white, size: 30),
             ],
           ),
         ),

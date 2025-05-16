@@ -1,11 +1,11 @@
 class Product {
   final String name;
   final String imageAsset;
-  final String category;
+  final Duration holdTime;
 
   const Product({
     required this.name,
     required this.imageAsset,
-    this.category = '',
+    required this.holdTime,
   });
 }

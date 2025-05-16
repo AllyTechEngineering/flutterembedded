@@ -1,13 +1,58 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
-      body: const Center(child: Text('This is the Home screen.')),
-    );
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool isPowerOn = false;
+
+  void _togglePower() {
+    setState(() {
+      isPowerOn = !isPowerOn;
+    });
+
+    if (isPowerOn) {
+      // Navigate after a short delay for visual confirmation
+      Future.delayed(const Duration(milliseconds: 400), () {
+        Navigator.pushNamed(context, '/control-on');
+      });
+    }
   }
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    backgroundColor: Colors.black,
+    body: SafeArea(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // 🔼 Henny Penny logo image
+            Image.asset(
+              'assets/images/hp_logo.png',
+              height: 120, // adjust as needed
+            ),
+            const SizedBox(height: 32), // spacing between logo and button
+
+            // 🔘 Power button
+            IconButton(
+              icon: Icon(
+                Icons.power_settings_new,
+                color: isPowerOn ? Colors.green : Colors.red,
+              ),
+              iconSize: 100,
+              onPressed: _togglePower,
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
 }
