@@ -145,7 +145,7 @@ class ControlOnScreen extends StatelessWidget {
                 color: Colors.green,
               ),
               const Text(
-                'HEAT OFF',
+                'HEAT ON',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,

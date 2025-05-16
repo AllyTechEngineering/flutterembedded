@@ -34,8 +34,9 @@ Widget build(BuildContext context) {
           children: [
             // 🔼 Henny Penny logo image
             Image.asset(
-              'assets/images/hp_logo.png',
-              height: 120, // adjust as needed
+             'assets/images/hp_logo.png',
+  width: MediaQuery.of(context).size.width * 0.6, // 60% of screen width
+  fit: BoxFit.contain,
             ),
             const SizedBox(height: 32), // spacing between logo and button
 
