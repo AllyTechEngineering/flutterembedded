@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CustomError {
   static void show(BuildContext context, Object error, {String? userMessage}) {
-   // final localizations = AppLocalizations.of(context)!;
+    final localizations = AppLocalizations.of(context)!;
 
     final String message = 'TBD';
     // userMessage ?? '${localizations.error_generic}\n$error';
