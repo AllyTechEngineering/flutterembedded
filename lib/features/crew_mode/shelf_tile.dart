@@ -34,25 +34,29 @@ class ShelfTile extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        elevation: 4,
+        elevation: 8,
+        shadowColor: Colors.black54,
         color: _getTileColor(),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Shelf $shelfNumber',
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-              ),
-              if (timerText != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 8),
-                  child: Text(
-                    timerText!,
-                    style: const TextStyle(fontSize: 24, color: Colors.white),
-                  ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Shelf $shelfNumber',
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
-            ],
+                if (timerText != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Text(
+                      timerText!,
+                      style: const TextStyle(fontSize: 24, color: Colors.white),
+                    ),
+                  ),
+              ],
+            ),
           ),
         ),
       ),
