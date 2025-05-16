@@ -22,6 +22,10 @@ class ProductSelectScreen extends StatelessWidget {
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
+          maxLines: null,
+          textAlign: TextAlign.center,
+          softWrap: true,
+          overflow: TextOverflow.visible,
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
