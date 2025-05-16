@@ -19,6 +19,9 @@ static void my_application_activate(GApplication* application) {
   MyApplication* self = MY_APPLICATION(application);
   GtkWindow* window =
       GTK_WINDOW(gtk_application_window_new(GTK_APPLICATION(application)));
+      gtk_window_set_decorated(window, FALSE);   // Removes title bar
+      //gtk_window_fullscreen(window);             // Makes window fullscreen
+
 
   // Use a header bar when running in GNOME as this is the common style used
   // by applications and is the setup most users will be using (e.g. Ubuntu
@@ -37,17 +40,17 @@ static void my_application_activate(GApplication* application) {
     }
   }
 #endif
-  if (use_header_bar) {
-    GtkHeaderBar* header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
-    gtk_widget_show(GTK_WIDGET(header_bar));
-    gtk_header_bar_set_title(header_bar, "flutterembedded");
-    gtk_header_bar_set_show_close_button(header_bar, TRUE);
-    gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
-  } else {
-    gtk_window_set_title(window, "flutterembedded");
-  }
+  // if (use_header_bar) {
+  //   GtkHeaderBar* header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
+  //   gtk_widget_show(GTK_WIDGET(header_bar));
+  //   gtk_header_bar_set_title(header_bar, "flutterembedded");
+  //   gtk_header_bar_set_show_close_button(header_bar, TRUE);
+  //   gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
+  // } else {
+  //   gtk_window_set_title(window, "flutterembedded");
+  // }
 
-  gtk_window_set_default_size(window, 1280, 720);
+  gtk_window_set_default_size(window, 480, 800);
   gtk_widget_show(GTK_WIDGET(window));
 
   g_autoptr(FlDartProject) project = fl_dart_project_new();

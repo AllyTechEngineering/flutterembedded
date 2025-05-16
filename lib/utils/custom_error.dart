@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+//import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CustomError {
   static void show(BuildContext context, Object error, {String? userMessage}) {
-    final localizations = AppLocalizations.of(context)!;
+   // final localizations = AppLocalizations.of(context)!;
 
     final String message = 'TBD';
     // userMessage ?? '${localizations.error_generic}\n$error';
